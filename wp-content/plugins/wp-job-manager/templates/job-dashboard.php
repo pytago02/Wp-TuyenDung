@@ -93,7 +93,7 @@ $job_query = new WP_Query( $args );
 						<?php echo esc_html( $column ); ?>
 					</div>
 				<?php endforeach; ?>
-				<div class="jm-dashboard-job-column jm-dashboard-job-column-label actions" style="">
+				<div class="jm-dashboard-job-column jm-dashboard-job-column-label actions" style="min-width: 200px; display: flex; justify-content: center;">
 					<?php esc_html_e( 'Hành động', 'wp-job-manager' ); ?>
 				</div>
 				<div class="jm-dashboard-job-column jm-dashboard-job-column-label applicants">
@@ -110,7 +110,7 @@ $job_query = new WP_Query( $args );
 								<?php do_action( 'job_manager_job_dashboard_column_' . $key, $job ); ?>
 							</div>
 						<?php endforeach; ?>
-						<div class="jm-dashboard-job-column actions job-dashboard-job-actions">
+						<div class="jm-dashboard-job-column actions job-dashboard-job-actions" style="min-width: 200px;">	
 							<?php do_action( 'job_manager_job_dashboard_column_actions', $job, $job_actions[ $job->ID ] ?? [] ); ?>
 							<?php
 							$actions_html = '';

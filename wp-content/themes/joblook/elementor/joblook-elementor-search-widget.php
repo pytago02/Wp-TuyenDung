@@ -83,7 +83,7 @@ class joblook_elementor_job_search extends Widget_Base {
 			
 			<div class="banner-search-input-wrap">
 			  <div class="form-group">
-				<label class="sr-only" for="search_keywords"><?php _e('Job Titles, Keywords, Phrase','joblook'); ?></label>
+				<label class="sr-only" for="search_keywords"><?php _e('Tên công việc, từ khoá, cụm từ','joblook'); ?></label>
 
    <svg class="svg-icon" viewBox="0 0 20 20">
 	<path fill="none" d="M7.228,11.464H1.996c-0.723,0-1.308,0.587-1.308,1.309v5.232c0,0.722,0.585,1.308,1.308,1.308h5.232
@@ -99,7 +99,7 @@ class joblook_elementor_job_search extends Widget_Base {
 		c0,0.361-0.293,0.654-0.654,0.654h-3.924c-0.361,0-0.654-0.292-0.654-0.654V2.962c0-0.361,0.293-0.654,0.654-0.654h3.924
 		c0.361,0,0.654,0.292,0.654,0.654V6.886z"></path>
 </svg>
-   <input type="text" name="search_keywords" class="form-control" id="search-keywords" placeholder="<?php esc_attr_e( 'Job Titles, Keywords, Phrase', 'joblook' ); ?>">
+   <input type="text" name="search_keywords" class="form-control" id="search-keywords" placeholder="<?php esc_attr_e( 'Tên công việc, từ khoá, cụm từ', 'joblook' ); ?>">
 				
 				
 				

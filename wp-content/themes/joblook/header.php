@@ -1,8 +1,8 @@
 <?php
 /**
- * The header for our theme
+ * Header cho theme của chúng ta
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * Đây là template hiển thị toàn bộ phần <head> và mọi thứ cho đến <div id="content">
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
@@ -42,7 +42,7 @@
 			background-color: #f1f1f1;
 		}
 
-		/* Style cho avatar trong dropdown */
+		/* Style cho ảnh đại diện trong dropdown */
 		.user-profile .rounded-circle {
 			width: 40px;
 			height: 40px;
@@ -51,6 +51,13 @@
 			border: 2px solid #ffffff;
 			box-shadow: 0 0 5px rgba(0,0,0,0.1);
 			transition: transform 0.3s ease;
+			position: relative;
+		}
+
+		.btn-logout {
+			position: absolute;
+			top: 40px;
+			left: 0;
 		}
 
 		.user-profile .rounded-circle:hover {
@@ -87,7 +94,18 @@ $header_full_width = $joblook_options['header_full_width'];
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'joblook' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Chuyển đến nội dung', 'joblook' ); ?></a>
+
+	<?php
+	if (!session_id()) {
+		session_start();
+	}
+	if (isset($_SESSION['error_message'])): ?>
+		<script>
+			alert('<?php echo esc_js($_SESSION['error_message']); ?>');
+		</script>
+		<?php unset($_SESSION['error_message']); ?>
+	<?php endif; ?>
 
 	<?php if($header_layout=="header1"){ ?>
 
@@ -160,7 +178,7 @@ $header_full_width = $joblook_options['header_full_width'];
 									<div class="dropdown">
 										<?php echo $avatar; ?>
 										<span class="user-name"><?php echo esc_html($current_user->display_name); ?></span>
-										<div class="dropdown-content">
+										<div class="dropdown-content btn-logout">
 											<a href="<?php echo wp_logout_url(home_url()); ?>">Đăng xuất</a>
 										</div>
 									</div>
@@ -186,7 +204,7 @@ $header_full_width = $joblook_options['header_full_width'];
 
 							<?php endif;  ?>
 
-							<button class="close-menu"><span class="sr-text"><?php echo esc_html__('Close Menu','joblook'); ?></span></button>
+							<button class="close-menu"><span class="sr-text"><?php echo esc_html__('Đóng Menu','joblook'); ?></span></button>
 
 
 						</nav><!-- #site-navigation -->
@@ -311,7 +329,7 @@ $header_full_width = $joblook_options['header_full_width'];
 
 							<?php endif;  ?>
 
-							<button class="close-menu"><span class="sr-text"><?php echo esc_html__('Close Menu','joblook'); ?></span></button>
+							<button class="close-menu"><span class="sr-text"><?php echo esc_html__('Đóng Menu','joblook'); ?></span></button>
 
 
 						</nav><!-- #site-navigation -->
@@ -460,7 +478,7 @@ $header_full_width = $joblook_options['header_full_width'];
 
 								<?php endif;  ?>
 
-								<button class="close-menu"><span class="sr-text"><?php echo esc_html__('Close Menu','joblook'); ?></span></button>
+								<button class="close-menu"><span class="sr-text"><?php echo esc_html__('Đóng Menu','joblook'); ?></span></button>
 
 
 							</nav><!-- #site-navigation -->

@@ -117,7 +117,7 @@ class Astoundify_Job_Manager_Regions_Template extends Astoundify_Job_Manager_Reg
 		}
 
 		wp_dropdown_categories( apply_filters( 'job_manager_regions_dropdown_args', array(
-			'show_option_all' => __( 'All Regions', 'wp-job-manager-locations' ),
+			'show_option_all' => __( 'Tỉnh/Thành Phố', 'wp-job-manager-locations' ),
 			'multiple' => false,
 			'hierarchical' => true,
 			'orderby' => 'name',
@@ -138,7 +138,7 @@ class Astoundify_Job_Manager_Regions_Template extends Astoundify_Job_Manager_Reg
 		}
 
 		wp_dropdown_categories( apply_filters( 'resume_manager_regions_dropdown_args', array(
-			'show_option_all' => __( 'All Regions', 'wp-job-manager-locations' ),
+			'show_option_all' => __( 'Tỉnh/Thành Phố', 'wp-job-manager-locations' ),
 			'hierarchical' => true,
 			'orderby' => 'name',
 			'taxonomy' => 'resume_region',

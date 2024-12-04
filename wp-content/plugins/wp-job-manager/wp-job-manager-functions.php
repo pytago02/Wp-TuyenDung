@@ -1292,7 +1292,7 @@ function job_manager_dropdown_categories( $args = '' ) {
 		'value'           => 'id',
 		'multiple'        => true,
 		'show_option_all' => false,
-		'placeholder'     => __( 'Choose a category&hellip;', 'wp-job-manager' ),
+		'placeholder'     => __( 'Loại công việc', 'wp-job-manager' ),
 		'no_results_text' => __( 'No results match', 'wp-job-manager' ),
 		'multiple_text'   => __( 'Select Some Options', 'wp-job-manager' ),
 	];

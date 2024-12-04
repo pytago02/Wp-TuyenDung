@@ -1,6 +1,6 @@
 <?php
 /**
- * Joblook functions and definitions
+ * Các hàm và định nghĩa của theme Joblook
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -8,57 +8,56 @@
  */
 
 /**
- * Sets up theme defaults and registers support for various WordPress features.
+ * Thiết lập các giá trị mặc định và đăng ký hỗ trợ cho các tính năng WordPress.
  *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
+ * Lưu ý rằng hàm này được gắn vào hook after_setup_theme, chạy trước hook init.
+ * Hook init quá muộn cho một số tính năng, như hiển thị hỗ trợ cho hình ảnh đại diện.
  */
 function joblook_setup() {
 	/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on Joblook, use a find and replace
-		* to change 'joblook' to the name of your theme in all the template files.
+		* Cho phép dịch theme.
+		* Các bản dịch có thể được đặt trong thư mục /languages/.
+		* Nếu bạn đang xây dựng theme dựa trên Joblook, hãy sử dụng tìm và thay thế
+		* để đổi 'joblook' thành tên theme của bạn trong tất cả các file mẫu.
 		*/
 	load_theme_textdomain( 'joblook', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
+	// Thêm liên kết RSS mặc định cho bài viết và bình luận vào head.
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
-		* Let WordPress manage the document title.
-		* By adding theme support, we declare that this theme does not use a
-		* hard-coded <title> tag in the document head, and expect WordPress to
-		* provide it for us.
+		* Cho phép WordPress quản lý tiêu đề tài liệu.
+		* Bằng cách thêm theme support, chúng ta tuyên bố rằng theme này không sử dụng
+		* thẻ <title> cứng trong head của tài liệu, và mong đợi WordPress
+		* cung cấp nó cho chúng ta.
 		*/
 	add_theme_support( 'title-tag' );
 
 	/*
-		* Enable support for Post Thumbnails on posts and pages.
+		* Bật hỗ trợ Hình ảnh đại diện cho bài viết và trang.
 		*
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	// Theme này sử dụng wp_nav_menu() ở một vị trí.
 	register_nav_menus(
 		array(
-			'primary' => esc_html__( 'Primary', 'joblook' ),
+			'primary' => esc_html__( 'Menu chính', 'joblook' ),
 		)
 	);
 
 	add_image_size( 'joblook-blog-thumbnail-img', 650, 450, true);
 
 	/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
+		* Chuyển đổi đánh dấu cốt lõi mặc định cho form tìm kiếm, form bình luận, và bình luận
+		* để xuất HTML5 hợp lệ.
 		*/
 	add_theme_support(
 		'html5',
 		array(
 			'search-form',
-			'comment-form',
+			'comment-form', 
 			'comment-list',
 			'gallery',
 			'caption',
@@ -67,7 +66,7 @@ function joblook_setup() {
 		)
 	);
 
-	// Set up the WordPress core custom background feature.
+	// Thiết lập tính năng nền tùy chỉnh WordPress cốt lõi.
 	add_theme_support(
 		'custom-background',
 		apply_filters(
@@ -79,11 +78,11 @@ function joblook_setup() {
 		)
 	);
 
-	// Add theme support for selective refresh for widgets.
+	// Thêm hỗ trợ theme cho làm mới có chọn lọc cho widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	/**
-	 * Add support for core custom logo.
+	 * Thêm hỗ trợ cho logo tùy chỉnh cốt lõi.
 	 *
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
@@ -100,9 +99,9 @@ function joblook_setup() {
 add_action( 'after_setup_theme', 'joblook_setup' );
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
+ * Đặt chiều rộng nội dung theo pixel, dựa trên thiết kế và stylesheet của theme.
  *
- * Priority 0 to make it available to lower priority callbacks.
+ * Ưu tiên 0 để làm cho nó khả dụng cho các callback có ưu tiên thấp hơn.
  *
  * @global int $content_width
  */
@@ -112,16 +111,16 @@ function joblook_content_width() {
 add_action( 'after_setup_theme', 'joblook_content_width', 0 );
 
 /**
- * Register widget area.
+ * Đăng ký khu vực widget.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function joblook_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'joblook' ),
+			'name'          => esc_html__( 'Thanh bên', 'joblook' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'joblook' ),
+			'description'   => esc_html__( 'Thêm widgets vào đây.', 'joblook' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -130,7 +129,7 @@ function joblook_widgets_init() {
 	);
 	for ($i = 1; $i <= 3; $i++) {
         register_sidebar(array(
-            'name' => esc_html__('Joblook Footer Widget', 'joblook') . $i,
+            'name' => esc_html__('Widget Footer Joblook', 'joblook') . $i,
             'id' => 'joblook_footer_' . $i,
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
@@ -142,7 +141,7 @@ function joblook_widgets_init() {
 add_action( 'widgets_init', 'joblook_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Đăng ký scripts và styles.
  */
 function joblook_scripts() {
 	wp_enqueue_style( 'joblook-style', get_stylesheet_uri() );
@@ -169,17 +168,17 @@ function joblook_scripts() {
 add_action( 'wp_enqueue_scripts', 'joblook_scripts',99  );
 
 /**
- * Implement the Custom Header feature.
+ * Thực hiện tính năng Header tùy chỉnh.
  */
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Custom template tags for this theme.
+ * Thẻ mẫu tùy chỉnh cho theme này.
  */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Functions which enhance the theme by hooking into WordPress.
+ * Các hàm nâng cao theme bằng cách gắn vào WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/plugin-activation.php';
@@ -187,27 +186,24 @@ require get_template_directory() . '/lib/joblook-tgmp.php';
 require get_template_directory() . '/elementor/joblook-elementor-widget.php';
 
 /**
- * Customizer additions.
+ * Bổ sung Customizer.
  */
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/joblook-customizer-default.php';
 require get_template_directory() . '/inc/customize-control.php';
 
 /**
- * Load Jetpack compatibility file.
+ * Tải file tương thích Jetpack.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-
 
 if (!function_exists('joblook_fonts')) :
     function joblook_fonts()
     {
         $fonts_url = '';
         $fonts = array();
-
 
 		if ('off' !== _x('on', 'Inter font: on or off', 'joblook')) {
             $fonts[] = 'Inter:400,600';
@@ -223,11 +219,9 @@ if (!function_exists('joblook_fonts')) :
     }
 endif;
 
-
 if(!function_exists('joblook_blog_get_category')) {
     function joblook_blog_get_category()
     {
-
         $terms = get_terms('category',array(
             'hide_empty' => true,
         ));
@@ -239,7 +233,6 @@ if(!function_exists('joblook_blog_get_category')) {
         return $options;
     }
 }
-
 
 if (!function_exists('joblook_get_excerpt')) :
     function joblook_get_excerpt($post_id, $count)
@@ -260,12 +253,8 @@ if (!function_exists('joblook_get_excerpt')) :
 		$excerpt = preg_replace($regex, '', $excerpt);
         $excerpt = strip_tags($excerpt);
 
-
         $excerpt = preg_replace('/\s\s+/', ' ', $excerpt);
         $excerpt = preg_replace('#\[[^\]]+\]#', ' ', $excerpt);
-
-
-
 
         $strip = explode(' ', $excerpt);
         foreach ($strip as $key => $single) {
@@ -281,11 +270,8 @@ if (!function_exists('joblook_get_excerpt')) :
             $excerpt = $excerpt . '...';
         }
         return $excerpt;
-        
-        
     }
 endif;
-
 
 if (!function_exists('joblook_archive_link')) {
     function joblook_archive_link($post)
@@ -298,36 +284,28 @@ if (!function_exists('joblook_archive_link')) {
     }
 }
 
-
 if (!function_exists('joblook_blank_widget')) {
-
     function joblook_blank_widget()
     {
         echo '<div class="col-md-4">';
         if (is_user_logged_in() && current_user_can('edit_theme_options')) {
-            echo '<a href="' . esc_url(admin_url('widgets.php')) . '" target="_blank">' . esc_html__('Add Footer Widget', 'joblook') . '</a>';
+            echo '<a href="' . esc_url(admin_url('widgets.php')) . '" target="_blank">' . esc_html__('Thêm Widget Footer', 'joblook') . '</a>';
         }
         echo '</div>';
     }
 }
 
-
-//radio box sanitization function
+//Hàm kiểm tra radio box
 function joblook_sanitize_radio( $input, $setting ){
-
-    //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+    //input phải là slug: chỉ cho phép ký tự chữ và số viết thường, dấu gạch ngang và gạch dưới
     $input = sanitize_key($input);
 
-    //get the list of possible radio box options
+    //lấy danh sách các tùy chọn radio box có thể có
     $choices = $setting->manager->get_control( $setting->id )->choices;
 
-    //return input if valid or return default option
+    //trả về input nếu hợp lệ hoặc trả về tùy chọn mặc định
     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-
 }
-
-
-
 
 if (!function_exists('joblook_archive_link')) {
     function joblook_archive_link($post)
@@ -339,8 +317,6 @@ if (!function_exists('joblook_archive_link')) {
         return $link;
     }
 }
-
-
 
 function joblook_enqueue_styles() {
     wp_enqueue_style('joblook-welcome-style', get_template_directory_uri() . '/welcome/welcome.css', array(), '1.0' );
@@ -348,7 +324,7 @@ function joblook_enqueue_styles() {
 }
 add_action('admin_enqueue_scripts', 'joblook_enqueue_styles');
 
-// Add admin notice
+// Thêm thông báo quản trị
 function joblook_admin_notice() { 
     global $pagenow;
     $theme_args      = wp_get_theme();
@@ -365,13 +341,12 @@ function joblook_admin_notice() {
 	        return;
 	    } ?>
 	    <div class="notice notice-success">
-	        <h1><?php esc_html_e('Hey, Thank you for installing Joblook Theme!', 'joblook'); ?></h1>
-	        <p><?php esc_html_e('Joblook is now installed and ready to use. Click below to see theme documentation, and other details to get started.', 'joblook'); ?></p>
-	        <p><a class="btn btn-default" href="<?php echo esc_url( admin_url( 'themes.php?page=joblook-welcome' ) ); ?>"><?php esc_html_e('Welcome to Joblook', 'joblook'); ?></a></p>
-	        <p class="dismiss-link"><strong><a href="?joblook_admin_notice=1"><?php esc_html_e( 'Dismiss', 'joblook' ); ?></a></strong></p>
+	        <h1><?php esc_html_e('Xin chào, cảm ơn bạn đã cài đặt Theme Joblook!', 'joblook'); ?></h1>
+	        <p><?php esc_html_e('Joblook đã được cài đặt và sẵn sàng sử dụng. Nhấp vào bên dưới để xem tài liệu theme và các chi tiết khác để bắt đầu.', 'joblook'); ?></p>
+	        <p><a class="btn btn-default" href="<?php echo esc_url( admin_url( 'themes.php?page=joblook-welcome' ) ); ?>"><?php esc_html_e('Chào mừng đến với Joblook', 'joblook'); ?></a></p>
+	        <p class="dismiss-link"><strong><a href="?joblook_admin_notice=1"><?php esc_html_e( 'Bỏ qua', 'joblook' ); ?></a></strong></p>
 	    </div>
 	    <?php
-
 	}
 }
 
@@ -379,7 +354,7 @@ add_action( 'admin_notices', 'joblook_admin_notice' );
 
 if( ! function_exists( 'joblook_update_admin_notice' ) ) :
 /**
- * Updating admin notice on dismiss
+ * Cập nhật thông báo quản trị khi bỏ qua
 */
 function joblook_update_admin_notice(){
     if ( isset( $_GET['joblook_admin_notice'] ) && $_GET['joblook_admin_notice'] = '1' ) {
@@ -389,14 +364,13 @@ function joblook_update_admin_notice(){
 endif;
 add_action( 'admin_init', 'joblook_update_admin_notice' );
 
-
 /**
- * Add a menu item to the admin menu.
+ * Thêm một mục menu vào menu quản trị.
  */
 function joblook_add_welcome_page() {
     add_theme_page(
-        esc_html__('About Joblook', 'joblook'),
-        esc_html__('Welcome to Joblook', 'joblook'),
+        esc_html__('Về Joblook', 'joblook'),
+        esc_html__('Chào mừng đến với Joblook', 'joblook'),
         'manage_options',
         'joblook-welcome',
         'joblook_welcome_page'
@@ -405,150 +379,150 @@ function joblook_add_welcome_page() {
 add_action('admin_menu', 'joblook_add_welcome_page');
 
 /**
- * Display the welcome page content.
+ * Hiển thị nội dung trang chào mừng.
  */
 function joblook_welcome_page() {
     include get_template_directory() . '/welcome/welcome.php';
 }
 
-// Thêm hàm xử lý gửi email khi ứng viên ứng tuyển
-function joblook_send_application_email($application_id, $job_id, $candidate_id) {
-    // Lấy thông tin công việc
-    $job = get_post($job_id);
-    $company_id = get_post_meta($job_id, '_job_author', true);
-    $company_user = get_user_by('id', $company_id);
-    $company_email = $company_user->user_email;
+// // Thêm hàm xử lý gửi email khi ứng viên ứng tuyển
+// function joblook_send_application_email($application_id, $job_id, $candidate_id) {
+//     // Lấy thông tin công việc
+//     $job = get_post($job_id);
+//     $company_id = get_post_meta($job_id, '_job_author', true);
+//     $company_user = get_user_by('id', $company_id);
+//     $company_email = $company_user->user_email;
     
-    // Lấy thông tin ứng viên
-    $candidate = get_user_by('id', $candidate_id);
-    $candidate_name = $candidate->display_name;
+//     // Lấy thông tin ứng viên
+//     $candidate = get_user_by('id', $candidate_id);
+//     $candidate_name = $candidate->display_name;
     
-    // Chuẩn bị nội dung email
-    $subject = sprintf('Có ứng viên mới ứng tuyển vào vị trí: %s', $job->post_title);
+//     // Chuẩn bị nội dung email
+//     $subject = sprintf('Có ứng viên mới ứng tuyển vào vị trí: %s', $job->post_title);
     
-    $message = sprintf(
-        'Xin chào,<br><br>
-        Ứng viên %s đã ứng tuyển vào vị trí %s.<br><br>
-        Để xem chi tiết hồ sơ ứng tuyển, vui lòng truy cập vào link sau:<br>
-        %s<br><br>
-        Trân trọng,<br>
-        %s',
-        $candidate_name,
-        $job->post_title,
-        admin_url('post.php?post=' . $application_id . '&action=edit'),
-        get_bloginfo('name')
-    );
+//     $message = sprintf(
+//         'Xin chào,<br><br>
+//         Ứng viên %s đã ứng tuyển vào vị trí %s.<br><br>
+//         Để xem chi tiết hồ sơ ứng tuyển, vui lòng truy cập vào link sau:<br>
+//         %s<br><br>
+//         Trân trọng,<br>
+//         %s',
+//         $candidate_name,
+//         $job->post_title,
+//         admin_url('post.php?post=' . $application_id . '&action=edit'),
+//         get_bloginfo('name')
+//     );
     
-    // Thiết lập headers
-    $headers = array(
-        'Content-Type: text/html; charset=UTF-8',
-        'From: ' . get_bloginfo('name') . ' <' . get_bloginfo('admin_email') . '>'
-    );
+//     // Thiết lập headers
+//     $headers = array(
+//         'Content-Type: text/html; charset=UTF-8',
+//         'From: ' . get_bloginfo('name') . ' <' . get_bloginfo('admin_email') . '>'
+//     );
     
-    // Gửi email
-    wp_mail($company_email, $subject, $message, $headers);
-}
-add_action('job_manager_application_submitted', 'joblook_send_application_email', 10, 3);
+//     // Gửi email
+//     wp_mail($company_email, $subject, $message, $headers);
+// }
+// add_action('job_manager_application_submitted', 'joblook_send_application_email', 10, 3);
 
-// Tùy chỉnh template email
-function joblook_email_template($message) {
-    $email_template = '
-    <div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
-        <div style="background: #f8f9fa; padding: 20px; border-radius: 5px;">
-            <h2 style="color: #333; margin-bottom: 20px;">Thông báo ứng tuyển mới</h2>
-            %s
-        </div>
-        <div style="text-align: center; margin-top: 20px; color: #666; font-size: 12px;">
-            Email này được gửi tự động từ %s
-        </div>
-    </div>';
+// // Tùy chỉnh template email
+// function joblook_email_template($message) {
+//     $email_template = '
+//     <div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
+//         <div style="background: #f8f9fa; padding: 20px; border-radius: 5px;">
+//             <h2 style="color: #333; margin-bottom: 20px;">Thông báo ứng tuyển mới</h2>
+//             %s
+//         </div>
+//         <div style="text-align: center; margin-top: 20px; color: #666; font-size: 12px;">
+//             Email này được gửi tự động từ %s
+//         </div>
+//     </div>';
     
-    return sprintf($email_template, $message, get_bloginfo('name'));
-}
-add_filter('job_manager_email_message', 'joblook_email_template');
+//     return sprintf($email_template, $message, get_bloginfo('name'));
+// }
+// add_filter('job_manager_email_message', 'joblook_email_template');
 
-// Xử lý form ứng tuyển
-function handle_job_application() {
-    if (isset($_POST['submit_job_application']) && wp_verify_nonce($_POST['job_application_nonce'], 'submit_job_application')) {
+// // Xử lý form ứng tuyển
+// function handle_job_application() {
+//     if (isset($_POST['submit_job_application']) && wp_verify_nonce($_POST['job_application_nonce'], 'submit_job_application')) {
         
-        // Lấy thông tin công việc
-        $job_id = intval($_POST['job_id']);
-        $job = get_post($job_id);
-        $company_id = get_post_meta($job_id, '_job_author', true);
-        $company_user = get_user_by('id', $company_id);
-        $employer_email = $company_user->user_email;
+//         // Lấy thông tin công việc
+//         $job_id = intval($_POST['job_id']);
+//         $job = get_post($job_id);
+//         $company_id = get_post_meta($job_id, '_job_author', true);
+//         $company_user = get_user_by('id', $company_id);
+//         $employer_email = $company_user->user_email;
 
-        // Lấy thông tin CV được chọn
-        $cv_id = intval($_POST['selected_cv']);
-        $cv_content = get_post_meta($cv_id, 'cv_html_content', true);
-        $cv_pdf_url = get_post_meta($cv_id, 'cv_pdf_file', true);
+//         // Lấy thông tin CV được chọn
+//         $cv_id = intval($_POST['selected_cv']);
+//         $cv_content = get_post_meta($cv_id, 'cv_html_content', true);
+//         $cv_pdf_url = get_post_meta($cv_id, 'cv_pdf_file', true);
         
-        // Lấy thông tin người ứng tuyển
-        $applicant = wp_get_current_user();
+//         // Lấy thông tin người ứng tuyển
+//         $applicant = wp_get_current_user();
 
-        // Chuẩn bị nội dung email
-        $subject = sprintf('Ứng viên %s ứng tuyển vị trí: %s', 
-            $applicant->display_name,
-            $job->post_title
-        );
+//         // Chuẩn bị nội dung email
+//         $subject = sprintf('Ứng viên %s ứng tuyển vị trí: %s', 
+//             $applicant->display_name,
+//             $job->post_title
+//         );
         
-        $message = sprintf(
-            'Thông tin ứng viên:<br><br>
-            Họ tên: %s<br>
-            Email: %s<br>
-            Số điện thoại: %s<br><br>
-            Thư giới thiệu:<br>%s<br><br>
-            CV đính kèm trong file PDF.',
-            $applicant->display_name,
-            $applicant->user_email,
-            get_user_meta($applicant->ID, 'phone', true),
-            wp_kses_post($_POST['cover_letter'])
-        );
+//         $message = sprintf(
+//             'Thông tin ứng viên:<br><br>
+//             Họ tên: %s<br>
+//             Email: %s<br>
+//             Số điện thoại: %s<br><br>
+//             Thư giới thiệu:<br>%s<br><br>
+//             CV đính kèm trong file PDF.',
+//             $applicant->display_name,
+//             $applicant->user_email,
+//             get_user_meta($applicant->ID, 'phone', true),
+//             wp_kses_post($_POST['cover_letter'])
+//         );
 
-        // Áp dụng template email
-        $message = joblook_email_template($message);
+//         // Áp dụng template email
+//         $message = joblook_email_template($message);
 
-        $headers = array(
-            'Content-Type: text/html; charset=UTF-8',
-            'From: ' . get_bloginfo('name') . ' <' . get_bloginfo('admin_email') . '>'
-        );
+//         $headers = array(
+//             'Content-Type: text/html; charset=UTF-8',
+//             'From: ' . get_bloginfo('name') . ' <' . get_bloginfo('admin_email') . '>'
+//         );
         
-        // Đính kèm file PDF của CV
-        $cv_pdf_path = get_attached_file(attachment_url_to_postid($cv_pdf_url));
-        $attachments = array($cv_pdf_path);
+//         // Đính kèm file PDF của CV
+//         $cv_pdf_path = get_attached_file(attachment_url_to_postid($cv_pdf_url));
+//         $attachments = array($cv_pdf_path);
 
-        // Gửi email
-        $mail_sent = wp_mail($employer_email, $subject, $message, $headers, $attachments);
+//         // Gửi email
+//         $mail_sent = wp_mail($employer_email, $subject, $message, $headers, $attachments);
 
-        if ($mail_sent) {
-            // Lưu đơn ứng tuyển vào database
-            $application = array(
-                'post_type' => 'job_application',
-                'post_title' => sprintf('Ứng tuyển: %s - %s', $applicant->display_name, $job->post_title),
-                'post_status' => 'publish',
-                'post_author' => $applicant->ID
-            );
+//         if ($mail_sent) {
+//             // Lưu đơn ứng tuyển vào database
+//             $application = array(
+//                 'post_type' => 'job_application',
+//                 'post_title' => sprintf('Ứng tuyển: %s - %s', $applicant->display_name, $job->post_title),
+//                 'post_status' => 'publish',
+//                 'post_author' => $applicant->ID
+//             );
             
-            $application_id = wp_insert_post($application);
+//             $application_id = wp_insert_post($application);
             
-            if ($application_id) {
-                update_post_meta($application_id, 'job_id', $job_id);
-                update_post_meta($application_id, 'cv_id', $cv_id);
-                update_post_meta($application_id, 'status', 'pending');
+//             if ($application_id) {
+//                 update_post_meta($application_id, 'job_id', $job_id);
+//                 update_post_meta($application_id, 'cv_id', $cv_id);
+//                 update_post_meta($application_id, 'status', 'pending');
                 
-                // Gọi action để thông báo ứng tuyển thành công
-                do_action('job_manager_application_submitted', $application_id, $job_id, $applicant->ID);
-            }
+//                 // Gọi action để thông báo ứng tuyển thành công
+//                 do_action('job_manager_application_submitted', $application_id, $job_id, $applicant->ID);
+//             }
             
-            wp_redirect(add_query_arg('application', 'success', get_permalink($job_id)));
-            exit;
-        } else {
-            wp_redirect(add_query_arg('application', 'failed', get_permalink($job_id)));
-            exit;
-        }
-    }
-}
-add_action('init', 'handle_job_application');
+//             wp_redirect(add_query_arg('application', 'success', get_permalink($job_id)));
+//             exit;
+//         } else {
+//             wp_redirect(add_query_arg('application', 'failed', get_permalink($job_id)));
+//             exit;
+//         }
+//     }
+// }
+// add_action('init', 'handle_job_application');
 
 // Hiển thị thông báo sau khi ứng tuyển
 function show_application_messages() {
@@ -589,35 +563,6 @@ function enqueue_job_apply_assets() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_job_apply_assets');
-
-function restrict_pages_for_subscribers() {
-    // Kiểm tra nếu người dùng là Subscriber
-    if (is_user_logged_in() && current_user_can('subscriber')) {
-        // Lấy URL của trang hiện tại
-        $current_url = home_url(add_query_arg(array(), $GLOBALS['wp']->request));
-
-        // Danh sách slug của các trang cần chặn
-        $restricted_pages = array(
-            home_url('/post-a-job'), // Thay bằng URL hoặc slug trang Đăng tuyển dụng
-            home_url('/tat-ca-cong-viec')   // Thay bằng URL hoặc slug trang Đã đăng tuyển
-        );
-
-        // Nếu URL hiện tại trùng với trang bị chặn
-        if (in_array($current_url, $restricted_pages)) {
-            // Thêm thông báo vào session
-            if (!session_id()) {
-                session_start();
-            }
-            $_SESSION['toast_message'] = 'Bạn không phải là nhà tuyển dụng';
-            
-            // Chuyển hướng về trang chủ
-            wp_redirect(home_url());
-            exit;
-        }
-    }
-}
-add_action('template_redirect', 'restrict_pages_for_subscribers');
-
 
 /**
  * Lưu CV vào user meta khi CV được tạo/cập nhật
@@ -695,4 +640,64 @@ function convert_input_to_p() {
 }
 add_action('wp_footer', 'convert_input_to_p');
  */
+
+ 
+
+function restrict_pages_for_employers() {
+    if (is_user_logged_in() && current_user_can('employer')) {
+        $current_url = home_url(add_query_arg(array(), $GLOBALS['wp']->request));
+        $restricted_pages = array(
+            home_url('/da-ung-tuyen'),
+            home_url('/quan-ly-cv'),
+            home_url('/ho-so-cv')
+        );
+
+        if (in_array($current_url, $restricted_pages)) {
+            if (!session_id()) {
+                session_start();
+            }
+            $_SESSION['error_message'] = 'Bạn không phải là ứng viên!';
+            
+            wp_redirect(home_url());
+            exit;
+        }
+    }
+}
+add_action('template_redirect', 'restrict_pages_for_employers');
+
+function restrict_pages_for_subscribers() {
+    // Kiểm tra nếu người dùng là Subscriber
+    if (is_user_logged_in() && current_user_can('subscriber')) {
+        // Lấy URL của trang hiện tại
+        $current_url = home_url(add_query_arg(array(), $GLOBALS['wp']->request));
+
+        // Danh sách slug của các trang cần chặn
+        $restricted_pages = array(
+            home_url('/post-a-job'), // Thay bằng URL hoặc slug trang Đăng tuyển dụng
+            home_url('/tat-ca-cong-viec')   // Thay bằng URL hoặc slug trang Đã đăng tuyển
+        );
+
+        // Nếu URL hiện tại trùng với trang bị chặn
+        if (in_array($current_url, $restricted_pages)) {
+            // Thêm thông báo vào session
+            if (!session_id()) {
+                session_start();
+            }
+            $_SESSION['error_message'] = 'Bạn không phải là nhà tuyển dụng';
+            
+            // Chuyển hướng về trang chủ
+            wp_redirect(home_url());
+            exit;
+        }
+    }
+}
+add_action('template_redirect', 'restrict_pages_for_subscribers');
+
+function redirect_after_login($user_login, $user) {
+    // Chuyển hướng người dùng về trang chủ sau khi đăng nhập
+    wp_redirect(home_url());
+    exit();
+}
+add_action('wp_login', 'redirect_after_login', 10, 2);
+
 

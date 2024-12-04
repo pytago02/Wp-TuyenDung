@@ -1177,7 +1177,7 @@ function link_categories_meta_box( $link ) {
 	?>
 <div id="taxonomy-linkcategory" class="categorydiv">
 	<ul id="category-tabs" class="category-tabs">
-		<li class="tabs"><a href="#categories-all"><?php _e( 'All categories' ); ?></a></li>
+		<li class="tabs"><a href="#categories-all"><?php _e( 'All Categories' ); ?></a></li>
 		<li class="hide-if-no-js"><a href="#categories-pop"><?php _ex( 'Most Used', 'categories' ); ?></a></li>
 	</ul>
 

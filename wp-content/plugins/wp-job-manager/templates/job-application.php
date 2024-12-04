@@ -86,11 +86,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 							
 							// Cập nhật meta data
 							update_user_meta($user_id, 'applied_jobs', $applied_jobs);
-							
-							echo '<div class="alert alert-success">';
-							echo '<p>' . esc_html__('Chúc mừng! Bạn đã ứng tuyển thành công.', 'wp-job-manager') . '</p>';
-							echo '<p>' . esc_html__('Bạn có thể xem danh sách công việc đã ứng tuyển', 'wp-job-manager') . ' <a href="' . esc_url(home_url('/da-ung-tuyen')) . '">' . esc_html__('tại đây', 'wp-job-manager') . '</a></p>';
-							echo '</div>';
+
+							// Gửi email cho nhà tuyển dụng 
+							$employer_email = get_post_meta($job_id, '_application', true); 
+							$candidate_name = wp_get_current_user()->display_name; 
+							$application_id = $job_id; // Bạn có thể điều chỉnh để lấy ID chính xác nếu cần 
+							$message = sprintf( 'Xin chào!<br><br> 
+								Ứng viên <strong>%s</strong> đã ứng tuyển vào công việc <strong>%s</strong> của bạn.<br><br> 
+								Để xem chi tiết hồ sơ ứng tuyển, vui lòng truy cập vào link sau:<br> 
+								%s<br><br> 
+								Trân trọng,<br> 
+								%s', $candidate_name, $job->post_title, admin_url('tat-ca-cong-viec'), get_bloginfo('name') ); 
+							$subject = 'Ứng tuyển mới: ' . $job->post_title; 
+							$headers = array('Content-Type: text/html; charset=UTF-8'); 
+							wp_mail($employer_email, $subject, $message, $headers);
 						}
 					}
 					?>

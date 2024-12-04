@@ -105,3 +105,15 @@ Stack trace:
 #4 {main}
   thrown in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\page-cv-ung-vien.php on line 43
 
+2024-12-04T02:10:48+00:00 CRITICAL Trait "Automattic\WooCommerce\Admin\Notes\NoteTraits" not found in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\pinterest-for-woocommerce\src\Notes\TokenExchangeFailure.php on line 21
+
+2024-12-04T02:13:03+00:00 CRITICAL Trait "Automattic\WooCommerce\Admin\Notes\NoteTraits" not found in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\pinterest-for-woocommerce\src\Notes\TokenExchangeFailure.php on line 21
+
+2024-12-04T03:27:52+00:00 CRITICAL syntax error, unexpected token "...", expecting "function" or "const" in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\plugin-activation.php on line 447
+
+2024-12-04T03:29:19+00:00 CRITICAL syntax error, unexpected token "...", expecting "function" or "const" in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\plugin-activation.php on line 447
+
+2024-12-04T03:29:22+00:00 CRITICAL syntax error, unexpected token "...", expecting "function" or "const" in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\plugin-activation.php on line 447
+
+2024-12-04T03:29:32+00:00 CRITICAL syntax error, unexpected token "...", expecting "function" or "const" in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\plugin-activation.php on line 447
+
