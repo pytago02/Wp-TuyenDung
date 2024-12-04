@@ -1,0 +1,226 @@
+/* Personal Data Css */
+.form-col {
+    text-align: left;
+    width: auto;
+}
+
+.preview-col {
+    width: auto;
+    margin: 0 2%;
+}
+
+.input-group-cols {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    width: 98%;
+    margin: 0 0 0 2%;
+}
+
+.input-col {
+    width: 49%;
+}
+
+.input-col label {
+    display: block;
+}
+
+.input-col .color-m {
+    margin-bottom: -15px;
+}
+
+.input-group.padding-10 {
+    padding: 15px 0;
+}
+
+.input-col input,
+.input-col select {
+    width: 96%;
+    height: 40px;
+}
+
+.input-group {
+    position: relative;
+    width: 98%;
+    margin: 0 0 0 2%;
+    box-sizing: border-box;
+}
+
+.square-img {
+    border-radius: 0;
+}
+
+.input-img-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-group img {
+    width: 49%;
+}
+
+.input-group input {
+    height: 40px;
+    width: 98%;
+    margin: 0 2% 0 0;
+}
+
+/* Switch checkbox */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 18px;
+}
+
+.switch-p {
+    margin: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/***********/
+
+
+.input-group textarea {
+    width: 98%;
+    margin: 0 2% 0 0;
+}
+
+.input-col .m-4 {
+    margin-left: 4%;
+}
+
+.tooltip-img {
+    display: none;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #979797;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #000000;
+    padding: 5px;
+    font-style: italic;
+    z-index: 20;
+    transition: 0.6s;
+}
+
+.input-img-group:hover .tooltip-img {
+    transition: 0.6s;
+    display: block;
+}
+
+input.pd-email,
+input.pd-code,
+input.pd-date-birth,
+input.pd-dr-lic,
+input.pd-nationality,
+input.pd-linkedin,
+input.pe-start-date,
+input .pe-prof-name,
+input.qf-degree-level,
+input.qf-start-date {
+    display: inline-block;
+    margin-right: 4%;
+}
+
+input.pd-tel,
+input.pd-city,
+input.pd-place-birth,
+select.pd-gender,
+input.pd-condition,
+input.pd-website,
+input.pe-end-date,
+input.pe-prof-city,
+input.qf-city,
+input.qf-end-date {
+    display: inline-block;
+    margin-left: 4%;
+}
+
+.dp-button {
+    height: 40px;
+    width: 98%;
+    margin: 0 2% 0 0;
+}
+
+.dp-button button {
+    height: 40px;
+    width: 100%;
+    transition: 600ms;
+}
+
+.dp-button-info {
+    cursor: pointer;
+}
+
+.dp-button-info strong {
+    font-size: 20px;
+}
+
+#dp-hidden-submit {
+    display: none;
+}
+
+.qf-main-container h2 {
+    margin-bottom: 5px;
+    padding-bottom: 0;
+}
+
+#btn-qf {
+    margin: 20px 5px;
+}

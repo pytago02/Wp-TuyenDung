@@ -1,0 +1,5 @@
+/* Main Style Css File */
+@import "include/global.css";
+@import "include/header.css";
+@import "include/personaldata.css";
+@import "include/preview.css";

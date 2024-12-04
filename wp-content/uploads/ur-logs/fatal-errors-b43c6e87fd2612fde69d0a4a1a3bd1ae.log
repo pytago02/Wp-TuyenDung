@@ -1,0 +1,107 @@
+2024-11-09T14:42:05+00:00 CRITICAL Cannot redeclare restrict_page_content_by_role() (previously declared in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php:417) in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php on line 434
+
+2024-11-09T14:42:25+00:00 CRITICAL Cannot redeclare restrict_page_content_by_role() (previously declared in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php:417) in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php on line 434
+
+2024-11-26T08:58:36+00:00 CRITICAL Out of memory (allocated 109051904) (tried to allocate 32768 bytes) in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\woocommerce\src\Blocks\BlockTypes\CartOrderSummaryHeadingBlock.php on line 1
+
+2024-11-26T09:27:07+00:00 CRITICAL Trait "Automattic\WooCommerce\Admin\Notes\NoteTraits" not found in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\pinterest-for-woocommerce\src\Notes\TokenExchangeFailure.php on line 21
+
+2024-11-26T09:27:42+00:00 CRITICAL Trait "Automattic\WooCommerce\Admin\Notes\NoteTraits" not found in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\pinterest-for-woocommerce\src\Notes\TokenExchangeFailure.php on line 21
+
+2024-11-26T09:30:23+00:00 CRITICAL Trait "Automattic\WooCommerce\Admin\Notes\NoteTraits" not found in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\pinterest-for-woocommerce\src\Notes\TokenExchangeFailure.php on line 21
+
+2024-11-26T09:44:02+00:00 CRITICAL Trait "Automattic\WooCommerce\Admin\Notes\NoteTraits" not found in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\pinterest-for-woocommerce\src\Notes\TokenExchangeFailure.php on line 21
+
+2024-11-26T09:53:41+00:00 CRITICAL Trait "Automattic\WooCommerce\Admin\Notes\NoteTraits" not found in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\pinterest-for-woocommerce\src\Notes\TokenExchangeFailure.php on line 21
+
+2024-11-26T09:57:21+00:00 CRITICAL Uncaught TypeError: array_keys(): Argument #1 ($array) must be of type array, null given in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\my-resume-builder\my-resume-builder.php:151
+Stack trace:
+#0 C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\my-resume-builder\my-resume-builder.php(151): array_keys(NULL)
+#1 C:\xampp\htdocs\tts-web\demo01\wp-admin\includes\template.php(1456): mrb_single_box_template(Object(WP_Post), Array)
+#2 C:\xampp\htdocs\tts-web\demo01\wp-admin\edit-form-advanced.php(722): do_meta_boxes(Object(WP_Screen), 'normal', Object(WP_Post))
+#3 C:\xampp\htdocs\tts-web\demo01\wp-admin\post-new.php(75): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\my-resume-builder\my-resume-builder.php on line 151
+
+2024-11-26T10:00:45+00:00 CRITICAL Uncaught TypeError: array_keys(): Argument #1 ($array) must be of type array, null given in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\my-resume-builder\my-resume-builder.php:151
+Stack trace:
+#0 C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\my-resume-builder\my-resume-builder.php(151): array_keys(NULL)
+#1 C:\xampp\htdocs\tts-web\demo01\wp-admin\includes\template.php(1456): mrb_single_box_template(Object(WP_Post), Array)
+#2 C:\xampp\htdocs\tts-web\demo01\wp-admin\edit-form-advanced.php(722): do_meta_boxes(Object(WP_Screen), 'normal', Object(WP_Post))
+#3 C:\xampp\htdocs\tts-web\demo01\wp-admin\post-new.php(75): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\my-resume-builder\my-resume-builder.php on line 151
+
+2024-11-27T06:53:54+00:00 CRITICAL Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\elementor\joblook-elementor-blog.php on line 3
+
+2024-11-27T07:12:22+00:00 CRITICAL Trait "Automattic\WooCommerce\Admin\Notes\NoteTraits" not found in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\pinterest-for-woocommerce\src\Notes\TokenExchangeFailure.php on line 21
+
+2024-11-27T07:15:21+00:00 CRITICAL Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\elementor\joblook-elementor-blog.php on line 3
+
+2024-11-27T07:15:35+00:00 CRITICAL Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\elementor\joblook-elementor-blog.php on line 3
+
+2024-11-27T07:15:48+00:00 CRITICAL Namespace declaration statement has to be the very first statement or after any declare call in the script in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\elementor\joblook-elementor-blog.php on line 3
+
+2024-11-28T02:11:35+00:00 CRITICAL Uncaught Error: Call to a member function remove_menu() on null in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php:621
+Stack trace:
+#0 C:\xampp\htdocs\tts-web\demo01\wp-includes\class-wp-hook.php(324): hide_jobs_menu_for_subscribers('')
+#1 C:\xampp\htdocs\tts-web\demo01\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\tts-web\demo01\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\tts-web\demo01\wp-settings.php(704): do_action('init')
+#4 C:\xampp\htdocs\tts-web\demo01\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\tts-web\demo01\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\tts-web\demo01\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\tts-web\demo01\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php on line 621
+
+2024-11-28T02:12:13+00:00 CRITICAL Uncaught Error: Call to a member function remove_menu() on null in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php:621
+Stack trace:
+#0 C:\xampp\htdocs\tts-web\demo01\wp-includes\class-wp-hook.php(324): hide_jobs_menu_for_subscribers('')
+#1 C:\xampp\htdocs\tts-web\demo01\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\tts-web\demo01\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\tts-web\demo01\wp-settings.php(704): do_action('init')
+#4 C:\xampp\htdocs\tts-web\demo01\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\tts-web\demo01\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\tts-web\demo01\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\tts-web\demo01\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php on line 621
+
+2024-11-28T02:12:16+00:00 CRITICAL Uncaught Error: Call to a member function remove_menu() on null in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php:621
+Stack trace:
+#0 C:\xampp\htdocs\tts-web\demo01\wp-includes\class-wp-hook.php(324): hide_jobs_menu_for_subscribers('')
+#1 C:\xampp\htdocs\tts-web\demo01\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\tts-web\demo01\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\tts-web\demo01\wp-settings.php(704): do_action('init')
+#4 C:\xampp\htdocs\tts-web\demo01\wp-config.php(96): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\tts-web\demo01\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\tts-web\demo01\wp-blog-header.php(13): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\tts-web\demo01\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php on line 621
+
+2024-11-29T01:39:34+00:00 CRITICAL Trait "Automattic\WooCommerce\Admin\Notes\NoteTraits" not found in C:\xampp\htdocs\tts-web\demo01\wp-content\plugins\pinterest-for-woocommerce\src\Notes\TokenExchangeFailure.php on line 21
+
+2024-11-29T03:25:07+00:00 CRITICAL Unclosed '{' on line 20 does not match ')' in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\page-da-ung-tuyen.php on line 57
+
+2024-12-03T09:23:18+00:00 CRITICAL Unterminated comment starting line 665 in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\functions.php on line 665
+
+2024-12-03T10:38:00+00:00 CRITICAL Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\page-cv-ung-vien.php:29
+Stack trace:
+#0 C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\page-cv-ung-vien.php(29): in_array('cv_67492b4c46ca...', NULL)
+#1 C:\xampp\htdocs\tts-web\demo01\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\tts-web\demo01\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\tts-web\demo01\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\page-cv-ung-vien.php on line 29
+
+2024-12-03T10:39:40+00:00 CRITICAL Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, null given in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\page-cv-ung-vien.php:43
+Stack trace:
+#0 C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\page-cv-ung-vien.php(43): in_array('cv_67492b4c46ca...', NULL)
+#1 C:\xampp\htdocs\tts-web\demo01\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\tts-web\demo01\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\tts-web\demo01\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\tts-web\demo01\wp-content\themes\joblook\page-cv-ung-vien.php on line 43
+

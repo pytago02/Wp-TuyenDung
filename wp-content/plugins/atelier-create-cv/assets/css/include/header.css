@@ -1,0 +1,44 @@
+/* Header Style */
+.admin-header {
+    position: relative;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid lightgray;
+    overflow: hidden;
+}
+
+figure.logo {
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.logo img {
+    object-fit: cover;
+    width: 120px;
+    height: auto;
+}
+
+.admin-logo,
+.admin-title {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+@media (max-width: 576px) {
+    .admin-logo {
+        justify-content: center;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo img {
+        width: 220px;
+    }
+    .admin-title {
+        justify-content: center;
+    }
+}

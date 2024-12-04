@@ -1,0 +1,56 @@
+/* Global Style */
+/* Variables */
+:root {
+    /* Fonts */
+    --fonts-OpenSans: 'Open Sans', sans-serif;
+    --fonts-Montsrrat: 'Montserrat', sans-serif;
+    --fonts-Lato: 'Lato', sans-serif;
+
+    /* Colors */
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #0F0F0F99;
+}
+
+.sections-wrap {
+    background-color: #fff;
+    color: #000;
+    padding: 30px 10px;
+    margin: 0 0 10px 7px;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.sections-wrap-container {
+    display: flex;
+}
+
+.preview-col {
+    font-family: var(--fonts-OpenSans);
+}
+
+.nav-tab-active,
+.nav-tab-active:focus,
+.nav-tab-active:focus:active,
+.nav-tab-active:hover {
+    background: #fff;
+    border-bottom: none;
+    border-bottom: 1px solid #fff;
+}
+
+h2.position-title {
+    font-size: 14px;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+@media (max-width: 1200px) {
+    .sections-wrap {
+        flex-direction: column;
+    }
+}
+

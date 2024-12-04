@@ -1,0 +1,40 @@
+
+---Downloaded files---
+The import files for: Joblook were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost/tts-web/demo01
+Data file = C:\xampp\htdocs\tts-web\demo01/wp-content/uploads/2024/11/demo-content-import-file_2024-11-08__13-39-08.xml
+Widget file = C:\xampp\htdocs\tts-web\demo01/wp-content/uploads/2024/11/demo-widgets-import-file_2024-11-08__13-39-08.json
+Customizer file = C:\xampp\htdocs\tts-web\demo01/wp-content/uploads/2024/11/demo-customizer-import-file_2024-11-08__13-39-08.dat
+Redux files:
+not defined!
+
+---Importing widgets---
+Sidebar : 
+
+Khối - No Title - Widget already exists
+Khối - No Title - Imported
+Khối - No Title - Imported
+Khối - No Title - Imported
+Khối - No Title - Imported
+
+Joblook Footer Widget1 : 
+
+Văn bản - About Company - Imported
+
+Joblook Footer Widget2 : 
+
+Menu - Links - Imported
+
+Joblook Footer Widget3 : 
+
+Văn bản - Support - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+

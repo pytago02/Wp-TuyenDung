@@ -1,0 +1,40 @@
+
+---Downloaded files---
+The import files for: Superjob Pro 2 were successfully downloaded!
+Initial max execution time = 360
+Files info:
+Site URL = https://demo.themesartist.com/joblookpro1
+Data file = /home/u137816479/domains/themesartist.com/public_html/demo/joblookpro1/wp-content/uploads/2024/02/demo-content-import-file_2024-02-10__09-01-40.xml
+Widget file = /home/u137816479/domains/themesartist.com/public_html/demo/joblookpro1/wp-content/uploads/2024/02/demo-widgets-import-file_2024-02-10__09-01-40.json
+Customizer file = /home/u137816479/domains/themesartist.com/public_html/demo/joblookpro1/wp-content/uploads/2024/02/demo-customizer-import-file_2024-02-10__09-01-40.dat
+Redux files:
+not defined!
+
+---Importing widgets---
+Sidebar : 
+
+Block - No Title - Widget already exists
+Block - No Title - Widget already exists
+Block - No Title - Widget already exists
+Block - No Title - Widget already exists
+Block - No Title - Widget already exists
+
+superjob Footer Widget1 : 
+
+Text - About Company - Imported
+
+superjob Footer Widget2 : 
+
+Navigation Menu - Links - Imported
+
+superjob Footer Widget3 : 
+
+Mailchimp Sign-Up Form - Newsletter - Imported
+
+
+
+---Importing customizer settings---
+Error: The customizer import file is not suitable for current theme. You can only import customizer settings for the same theme or a child theme.
+
+---ocdi/after_import---
+

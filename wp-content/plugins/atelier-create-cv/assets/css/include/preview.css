@@ -1,0 +1,348 @@
+/* Preview Css */
+#print-body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.preview-body {
+    display: flex;
+    position: relative;
+    /*width: 210mm;*/
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+    page-break-after: auto;
+}
+
+@media (max-width: 1200px) {
+    .sections-wrap-container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1400px) {
+    .preview-body {
+        width: 210mm;
+    }
+}
+
+.preview-sidebar {
+    position: relative;
+    width: 33%;
+    min-height: 296.8mm;
+    padding: 2%;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #3F6592;
+    color: #fff;
+}
+
+.preview-sidebar h2 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 0 0 10px;
+}
+
+.data-group {
+    margin-bottom: 10px;
+}
+
+.preview-sidebar .sidebar-window h4 {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 2px 0;
+    margin: 0;
+}
+
+.preview-sidebar .sidebar-window p {
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 2px 0;
+    margin: 0;
+}
+
+.preview-sidebar .sidebar-window h4 {
+    font-weight: bold;
+}
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    width: 40mm;
+    height: 40mm;
+}
+
+.image-box img {
+    border: 3px solid #fff;
+    height: 100%;
+    object-fit: cover;
+    width: 42mm;
+}
+
+.square-img {
+    border-radius: 0;
+}
+
+.circle-img {
+    border-radius: 50%;
+}
+
+/* Content */
+.content-preview,
+.content-window {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.title-content h1 {
+    font-size: 26px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #c7d0f9;
+}
+
+.skill-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.title-qf,
+.title-edu,
+.title-skill {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #c7d0f9;
+}
+
+.title-qf i,
+.title-edu i,
+.title-skill i {
+    padding-right: 10px;
+}
+
+.title-qf h2,
+.title-edu h2,
+.title-skill h2{
+    padding: 10px 0;
+    font-weight: bold;
+    margin: 0;
+}
+
+.main-profession,
+.main-edu,
+.main-lang,
+.main-curse,
+.skill-box {
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+}
+
+.container-experience,
+.container-school,
+.lang-container,
+.curse-row,
+.pp-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 4px 0 0;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #000;
+}
+
+.pex-delete,
+.sch-delete,
+.lang-delete,
+.curse-delete {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.container-experience:hover .pex-delete,
+.container-school:hover .sch-delete,
+.lang-container:hover .lang-delete,
+.curse-row:hover .curse-delete {
+    display: flex;
+    align-items: center;
+    transition: 0.6s;
+}
+
+
+.circle-box {
+    position: absolute;
+    top: -6px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--black);
+    box-sizing: border-box;
+}
+
+.date-col {
+    position: relative;
+    width: 30%;
+    height: auto;
+    padding-right: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.date-box {
+    padding: 5px 10px;
+}
+
+.date-box span {
+    font-weight: normal;
+}
+
+.experience-col,
+.education-col {
+    position: relative;
+    width: 70%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-col .content-position,
+.education-col .content-position {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 10px 5px;
+    margin: 0;
+}
+
+.experience-col .content-position h2,
+.education-col .content-position h2 {
+    padding: 3px 0;
+    margin: 0;
+    color: var(--black);
+    letter-spacing: 0.5px;
+}
+
+.experience-col .content-position p,
+.education-col .content-position p {
+    padding: 0;
+    margin: 0;
+    color: rgb(28, 136, 224);
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.experience-col .content-position p.desc,
+.education-col .content-position p.desc {
+    padding: 0;
+    margin: 0;
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0.6px;
+    line-height: 13px;
+}
+
+
+.content-skill {
+    margin: 4px 0 0;
+    border-left: 1px solid #000;
+}
+
+.languages-box,
+.curse-box,
+.content-skill {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.languages-box p,
+.curse-box span,
+.content-skill p {
+    margin: 0;
+    padding: 2px 0;
+    font-weight: normal;
+    color: var(--gray);
+}
+
+.pp-container {
+    margin-top: 10px;
+}
+
+.pp-box {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+}
+
+.pp-box span {
+    font-weight: normal;
+}
+
+.print-cv {
+    padding: 20px;
+}
+
+/* Add style with 27.12.2023r. */
+.buy-coffee a img {
+    object-fit: cover;
+    height: auto;
+    width: 180px;
+}
+
+.paypalme {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #d1d1d1;
+    background-color: #efe3f9;
+    box-shadow: 0 0 5px purple;
+    margin: 20px 20px 20px 100px;
+    padding: 10px;
+}
+
+.paypalme a img {
+    object-fit: cover;
+    height: auto;
+    width: 160px;
+}
